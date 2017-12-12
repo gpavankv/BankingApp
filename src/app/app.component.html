@@ -6,5 +6,15 @@
 </div>
 
 <button [class]="classBtnValue" style="margin: 10px">Property Binding Example!</button>
+<br>
 
+<h3  style="padding: 10px"> Two Way Data Binding!</h3>
+<div style="padding: 10px">
+  Enter Some Text:  <input [(ngModel)]="name" type="text">
+  <br>
+
+</div>
+<div style="padding: 10px">
+  Output from TextBox: <input [value]="name" type="text">
+</div>
 
