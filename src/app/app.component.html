@@ -5,16 +5,27 @@
   </h2>
 </div>
 
-<button [class]="classBtnValue" style="margin: 10px">Property Binding Example!</button>
+<button [class]="classBtnValue" style="margin: 10px">Property Binding Example!</button> - This button's type keeps changing based on class property binding!
 <br>
 
-<h3  style="padding: 10px"> Two Way Data Binding!</h3>
+<div>
+  <h3  style="padding: 10px"> Two Way Data Binding!</h3>
+</div>
 <div style="padding: 10px">
-  Enter Some Text:  <input [(ngModel)]="name" type="text">
+  Enter some text here and see it reflect on the text box below:  <input [(ngModel)]='name' type="text">
   <br>
 
 </div>
 <div style="padding: 10px">
-  Output from TextBox: <input [value]="name" type="text">
+  These two text boxes are linked via Two Way Data Binding! Output from TextBox: <input [value]='name' type="text">
 </div>
+
+<div style="padding: 10px">
+  <button class="btn btn-primary" (click)="clickEvent()">Click for Event Binding!</button>
+</div>
+
+<div id="eventBind" style="padding: 10px">
+
+</div>
+
 
