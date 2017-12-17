@@ -1,0 +1,35 @@
+<div style="padding: 10px">
+  <h2>
+    {{a_title}} - String Interpolation
+  </h2>
+  Here the wre're passing data from the parent component to the child component
+</div>
+
+<button [class]="classBtnValue" style="margin: 10px">Property Binding Example!</button> - This button's type keeps changing based on class property binding!
+<br>
+
+<div>
+  <h3  style="padding: 10px"> Two Way Data Binding!</h3>
+</div>
+<div style="padding: 10px">
+  Enter some text here and see it reflect on the text box below(child component text box):  <input [(ngModel)]='c_title' type="text">
+  <br>
+
+</div>
+<div style="padding: 10px">
+  These two text boxes are linked via Two Way Data Binding! Output from TextBox: <input (input)='inputEvent()'  [(ngModel)]='c_title' [value]='c_title' type="text">
+</div>
+
+<div style="padding: 10px">
+  <button class="btn btn-primary" (click)="clickEvent()">Click for Event Binding!</button>
+</div>
+
+<div id="eventBind" style="padding: 10px">
+
+</div>
+
+<div style="padding: 10px;">
+  <button (click)="emitTitle()" class="btn btn-primary">Click to Emit Title Data to Parent</button>
+</div>
+
+
