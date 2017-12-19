@@ -10,7 +10,7 @@ export class DataBindingComponent implements OnInit {
 @Output() sendTitle: EventEmitter<any> = new EventEmitter<any>();
 c_title = '';
 
-constructor() {
+constructor(private logger: LoggerService) {
 }
   btnValue = true;
   classBtnValue = '';
@@ -25,6 +25,7 @@ constructor() {
       this.classBtnValue = 'btn btn-primary';
       this.btnValue  = !this.btnValue;
       console.log('prim');
+      // this.logger.logData('prim');
     } else {
       this.classBtnValue = 'btn btn-danger';
       this.btnValue = !this.btnValue;

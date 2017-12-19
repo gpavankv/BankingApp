@@ -1,5 +1,5 @@
 export class LoggerService{
-  static logData(data: any) {
+  logData(data: any) {
     console.log(data);
   }
 }
