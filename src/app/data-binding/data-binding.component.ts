@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { LoggerService} from '../services/LoggerService';
 
 @Component({
   selector: 'app-data-binding',
@@ -25,7 +26,7 @@ constructor(private logger: LoggerService) {
       this.classBtnValue = 'btn btn-primary';
       this.btnValue  = !this.btnValue;
       console.log('prim');
-      // this.logger.logData('prim');
+      this.logger.logData('prim');
     } else {
       this.classBtnValue = 'btn btn-danger';
       this.btnValue = !this.btnValue;
