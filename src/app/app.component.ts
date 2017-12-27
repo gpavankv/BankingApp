@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.title = 'Another Angular App!';
   }
 }
 
