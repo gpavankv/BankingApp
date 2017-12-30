@@ -1,33 +1,14 @@
 <app-header></app-header>
 
-<!-- Page Content -->
-<div class="container">
-
-  <!-- Jumbotron Header -->
-  <header class="jumbotron my-4">
-    <h1 class="display-3">A Warm Welcome!</h1>
-    <p class="lead">This website has all the angular examples you need!</p>
-    <div>Enter some text here and see it reflect on the Title and the child components text box:   <input [(ngModel)]='title' type="text">
-      <br>
-    </div>
-    <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
-  </header>
-
 <router-outlet></router-outlet>
-</div>
-<!-- /.container -->
 
-<!-- Footer -->
 <footer class="py-5 bg-dark">
   <div class="container">
     <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+    <a href="#">Home</a><br>
+    <a href="#">About</a><br>
+    <a href="#">Contact us</a>
+
   </div>
-  <!-- /.container -->
+
 </footer>
-
-<!-- Bootstrap core JavaScript -->
-
-
-
-
-<!--<app-data-binding [a_title]="title" (sendTitle)="getTitle($event)"></app-data-binding>-->

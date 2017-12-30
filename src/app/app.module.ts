@@ -1,34 +1,43 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {RouterModule, Routes} from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import {LoggerService} from './services/LoggerService';
-import { FeaturesComponent } from './features/features.component';
+import { LoginComponent } from './login/login.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { AuthService } from '../services/auth.service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LoginModule } from './login/login.module';
+import { LandingPageModule } from './landing-page/landing-page.module';
+import { UserService } from '../services/UserService';
+import { SharedService } from '../services/SharedService';
 
 const appRoutes: Routes = [
-  { path: '', component: FeaturesComponent },
-  { path: 'binding', component: DataBindingComponent},
-  {path: 'services', component: HeaderComponent},
+  { path: '', component: CarouselComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'main', component: LandingPageComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DataBindingComponent,
-    FeaturesComponent
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    LoginModule,
+    LandingPageModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [LoggerService],
+  providers: [
+    AuthService,
+    UserService,
+    SharedService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
