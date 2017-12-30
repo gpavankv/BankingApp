@@ -16,6 +16,9 @@ import { SharedService } from '../services/SharedService';
 
 const appRoutes: Routes = [
   { path: '', component: CarouselComponent },
+  { path: 'en-UK', component: CarouselComponent },
+  { path: 'en-CA', component: CarouselComponent },
+  { path: 'en-US', component: CarouselComponent },
   { path: 'login', component: LoginComponent },
   { path: 'main', component: LandingPageComponent }
 ];
